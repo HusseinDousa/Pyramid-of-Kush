@@ -52,5 +52,15 @@ public class Player : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         transform.Translate(-Vector3.right * _speed * Time.deltaTime * horizontal);
 
+        if(transform.position.x >= 60f)
+        {
+            transform.position = new Vector3(60f, transform.position.y, transform.position.z);
+        }
+
+        else if(transform.position.x <= 30f)
+        {
+            transform.position = new Vector3(30f, transform.position.y, transform.position.z);
+        }
+
     }
 }
