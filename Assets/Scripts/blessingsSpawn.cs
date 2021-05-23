@@ -19,7 +19,7 @@ public class blessingsSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // use switch statement to make different collectibles
     }
 
     IEnumerator treasureSpawn()
