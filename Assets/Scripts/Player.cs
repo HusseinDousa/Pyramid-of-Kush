@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody>();
+        //rb = GetComponent<Rigidbody>();
         _anim = GetComponent<Animator>();
         _controller = GetComponent<CharacterController>();
 
@@ -28,9 +28,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        //movement();
         movements();
-        jump();
+        //jump();
 
     }
 
