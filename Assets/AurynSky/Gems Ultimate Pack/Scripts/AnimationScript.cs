@@ -89,6 +89,11 @@ public class AnimationScript : MonoBehaviour {
 
     void falling()
     {
-        transform.Translate(-Vector3.forward * Time.deltaTime * 3f);
+        if (transform.position.z != 20f)
+        {
+            Vector3 _position = new Vector3(transform.position.x, transform.position.y, 20f);
+            transform.position = _position;
+        }
+        //transform.Translate(-Vector3.forward * Time.deltaTime * 3f);
     }
 }

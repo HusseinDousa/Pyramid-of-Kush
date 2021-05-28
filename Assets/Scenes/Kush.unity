@@ -224,7 +224,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
+  m_Height: 1.82
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 7
-  _jumpHeight: 225
+  _jumpHeight: 300
   _gravity: -10
   _player: {fileID: 45681780}
   _controller: {fileID: 45681776}
@@ -314,7 +314,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 174384672}
-  m_LocalRotation: {x: -0.04398948, y: 0.00000010993964, z: 0.0000000048408735, w: 0.999032}
+  m_LocalRotation: {x: -0.043989483, y: 0.00000011423707, z: 0.0000000050300994, w: 0.999032}
   m_LocalPosition: {x: 45.349995, y: 3.0700002, z: 2.999998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -715,7 +715,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1048856333}
-  m_LocalRotation: {x: -0.04398948, y: 0.00000010993964, z: 0.0000000048408735, w: 0.999032}
+  m_LocalRotation: {x: -0.043989483, y: 0.00000011423707, z: 0.0000000050300994, w: 0.999032}
   m_LocalPosition: {x: 45.349995, y: 3.0700002, z: 2.999998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -825,7 +825,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 167976, guid: e0aacbfc96bd51d4285cd15973f01e92, type: 3}
       propertyPath: m_Name
-      value: Male Black Barbarian 06 Black
+      value: Zoal
       objectReference: {fileID: 0}
     - target: {fileID: 440406, guid: e0aacbfc96bd51d4285cd15973f01e92, type: 3}
       propertyPath: m_RootOrder
@@ -1067,7 +1067,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad67f15afdd9d34448ed2736287a424b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _blessings: {fileID: 1000011841440206, guid: 0ed203d298c050b49bfabe788790e1c2, type: 3}
+  _blessings:
+  - {fileID: 1000010880751780, guid: c3c0707254334a64ca8198f7486e977d, type: 3}
+  - {fileID: 1000011501826600, guid: b34bf25cecb5fc24c91de3edea19cb13, type: 3}
+  - {fileID: 1000010694622314, guid: c4bf8b30fce268044a786a8600922324, type: 3}
 --- !u!4 &1909512207
 Transform:
   m_ObjectHideFlags: 0

@@ -12,8 +12,6 @@ public class Player : MonoBehaviour
 
     public CharacterController _controller;
     private Vector3 _direction;
-
-    private Rigidbody rb;
     [SerializeField] private bool _isGrounded = true;
 
     private void Awake()
@@ -29,25 +27,31 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         movements();
-        //jump();
+        jump();
+        collisionDetection();
+
 
     }
 
-    private void OnCollisionStay(Collision collision)
+    void collisionDetection()
     {
-        if (collision.collider.tag == "Ground")
+        if (_controller.collisionFlags == CollisionFlags.Below)
         {
             _isGrounded = true;
-            //Debug.Log("is grounded");
+            Debug.Log("is grounded");
+        }
+
+        else if (_controller.collisionFlags == CollisionFlags.None)
+        {
+            Debug.Log("Jumping");
         }
     }
 
     void jump()
     {
-        // Remove rigidbody and add y movement
         if (Input.GetButton("Jump") && _isGrounded == true)
         {
-            rb.AddForce(Vector3.up * _jumpHeight);
+            _direction.y = _jumpHeight * Time.deltaTime;
             _anim.Play("Jump");
             _isGrounded = false;
         }
@@ -83,6 +87,12 @@ public class Player : MonoBehaviour
         else if (transform.position.x <= 30f)
         {
             transform.position = new Vector3(30f, transform.position.y, transform.position.z);
+        }
+
+        if (transform.position.z != 20f)
+        {
+            Vector3 _position = new Vector3(transform.position.x, transform.position.y, 20f);
+            transform.position = _position;
         }
 
     }
