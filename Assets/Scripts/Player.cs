@@ -45,6 +45,7 @@ public class Player : MonoBehaviour
         {
             Debug.Log("Jumping");
         }
+
     }
 
     void jump()
@@ -95,5 +96,14 @@ public class Player : MonoBehaviour
             transform.position = _position;
         }
 
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.tag == "Treasure")
+        {
+            Destroy(hit.gameObject);
+            Debug.Log("Took collectible");
+        }
     }
 }
