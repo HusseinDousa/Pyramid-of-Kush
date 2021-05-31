@@ -102,6 +102,7 @@ public class Player : MonoBehaviour
     {
         if (hit.gameObject.tag == "Treasure")
         {
+            // destroys treasure
             Destroy(hit.gameObject);
             Debug.Log("Took collectible");
         }
