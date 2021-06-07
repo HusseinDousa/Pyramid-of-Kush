@@ -6,7 +6,7 @@ public class blessingsSpawn : MonoBehaviour
 {
 
     public GameObject[] _blessings;
-    private float _blessingSpawnTime = 3.0f;
+    private float _blessingSpawnTime = 2.0f;
     private bool _stopSpawn = false;
 
   
@@ -38,7 +38,7 @@ public class blessingsSpawn : MonoBehaviour
         while(_stopSpawn == false)
         {
             // Randomize treasure prefab
-            int prefab_num = Random.Range(0, 3);
+            int prefab_num = Random.Range(0, _blessings.Length);
 
             Vector3 direction = new Vector3(Random.Range(35.0f, 55.0f), 10.0f, 20.0f);
             GameObject newBlessing = Instantiate(_blessings[prefab_num], direction, Quaternion.Euler(-90f, 0.0f, 0.0f));

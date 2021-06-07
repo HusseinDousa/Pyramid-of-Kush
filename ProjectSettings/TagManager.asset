@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Treasure
+  - Left_Spawn
+  - Right_Spawn
   layers:
   - Default
   - TransparentFX
